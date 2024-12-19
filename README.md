@@ -12,20 +12,8 @@ This repository contains an implementation of the **Ridge Regression** model in 
 ## Introduction
 
 Ridge Regression is a regularization technique for linear regression that aims to address overfitting by adding a penalty to the magnitude of the coefficients. The objective function in Ridge Regression is:
-\[
-J(\theta) = \sum_{i=1}^{m} \left( y_i - \mathbf{x}_i^T \boldsymbol{\theta} \right)^2 + \lambda \sum_{j=1}^{n} \theta_j^2
-\]
 
-Where:
-- \( J(\theta) \) is the **cost function** (objective function) that we aim to minimize.
-- \( m \) is the number of training samples.
-- \( y_i \) is the actual target value for the \(i\)-th training example.
-- \( \mathbf{x}_i \) is the feature vector for the \(i\)-th training example.
-- \( \boldsymbol{\theta} \) is the vector of model parameters (coefficients).
-- \( \mathbf{x}_i^T \boldsymbol{\theta} \) is the dot product of the feature vector and the parameter vector, which gives the predicted value for the \(i\)-th example.
-- \( \lambda \) is the **regularization parameter** (penalty term).
-- \( \theta_j \) is the individual parameters (coefficients) of the model.
-
+![Ridge Regression Equation](https://latex.codecogs.com/png.latex?J%28%5Ctheta%29%20%3D%20%5Csum_%7Bi%3D1%7D%5Em%20%5Cleft%28y_i%20-%20%5Cmathbf%7Bx%7Di%5ET%20%5Cboldsymbol%7B%5Ctheta%7D%5Cright%29%5E2%20%2B%20%5Clambda%20%5Csum_%7Bj%3D1%7D%5En%20%5Ctheta_j%5E2)
 ## Dependencies
 
 The project requires the following Python libraries:
