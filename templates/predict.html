@@ -1,0 +1,71 @@
+<!-- predict.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Ridge Regression Prediction</h1>
+        <form action="/predict" method="POST" class="mt-4">
+            <div class="mb-3">
+                <label for="Temperature" class="form-label">Temperature</label>
+                <input type="text" class="form-control" id="Temperature" name="Temperature" placeholder="Enter Temperature value in celcius" required>
+            </div>
+            <div class="mb-3">
+                <label for="RH" class="form-label">RH</label>
+                <input type="text" class="form-control" id="RH" name="RH" placeholder="Enter Relative Humidity value" required>
+            </div>
+            <div class="mb-3">
+                <label for="Ws" class="form-label">Ws</label>
+                <input type="text" class="form-control" id="Ws" name="Ws" placeholder="Enter Wind Speed value" required>
+            </div>
+            <div class="mb-3">
+                <label for="Rain" class="form-label">Rain</label>
+                <input type="text" class="form-control" id="Rain" name="Rain" placeholder="Enter Rain value" required>
+            </div>
+            <div class="mb-3">
+                <label for="FFMC" class="form-label">FFMC</label>
+                <input type="text" class="form-control" id="FFMC" name="FFMC" placeholder="Enter Fine Fuel Moisture Code value" required>
+            </div>
+            <div class="mb-3">
+                <label for="DMC" class="form-label">DMC</label>
+                <input type="text" class="form-control" id="DMC" name="DMC" placeholder="Enter Duff Moisture Code value" required>
+            </div>
+            <div class="mb-3">
+                <label for="DC" class="form-label">DC</label>
+                <input type="text" class="form-control" id="DC" name="DC" placeholder="Enter Drought Code value" required>
+            </div>
+            <div class="mb-3">
+                <label for="ISI" class="form-label">ISI</label>
+                <input type="text" class="form-control" id="ISI" name="ISI" placeholder="Enter Initial Spread Index value" required>
+            </div>
+            <div class="mb-3">
+                <label for="BUI" class="form-label">BUI</label>
+                <input type="text" class="form-control" id="BUI" name="BUI" placeholder="Enter Build Up Index value" required>
+            </div>
+            <div class="mb-3">
+                <label for="Classes" class="form-label">Classes</label>
+                <input type="text" class="form-control" id="Classes" name="Classes" placeholder="Enter Classes value(0 or 1)" required>
+            </div>
+            <div class="mb-3">
+                <label for="Region" class="form-label">Region</label>
+                <input type="text" class="form-control" id="Region" name="Region" placeholder="Enter Region value(0 or 1)" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+        <div class="mt-4">
+            <h2>
+                THE FWI prediction is {{result}}
+            </h2>
+        </div>
+        <div class="mt-3">
+            <a href="/" class="btn btn-secondary">Return to Home</a>
+        </div>
+    </div>
+</body>
+</html>
+

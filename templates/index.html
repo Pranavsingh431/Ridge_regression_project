@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Ridge Regression</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        .section-title {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .section-content {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Welcome to Ridge Regression Predictor</h1>
+        <p class="text-center">This application predicts outcomes using a Ridge Regression model.</p>
+        <div class="text-center">
+            <a href="/predict" class="btn btn-primary">Go to Prediction Page</a>
+        </div>
+
+        <!-- Section for Linear Regression Explanation -->
+        <div class="section-title">
+            <h2>What is Linear Regression?</h2>
+        </div>
+        <div class="section-content">
+            <p>Linear Regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. In simple terms, it finds the best-fit straight line that predicts the dependent variable based on the independent variables.</p>
+            <p>The formula for a simple linear regression model is:</p>
+            <pre>y = β0 + β1 * x</pre>
+            <p>Where:</p>
+            <ul>
+                <li>y is the dependent variable (target)</li>
+                <li>x is the independent variable (feature)</li>
+                <li>β0 is the intercept</li>
+                <li>β1 is the coefficient of x (slope)</li>
+            </ul>
+            <div class="text-center">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/python-linear-regression-2.png" alt="Linear Regression" class="img-fluid">
+            </div>
+        </div>
+
+        <!-- Section for Ridge Regression Explanation -->
+        <div class="section-title">
+            <h2>What is Ridge Regression?</h2>
+        </div>
+        <div class="section-content">
+            <p>Ridge Regression is an extension of linear regression that includes a regularization term. The purpose of this regularization is to prevent overfitting by adding a penalty to the size of the coefficients. The result is a more generalized model.</p>
+            <p>The formula for Ridge Regression is:</p>
+            <pre>y = β0 + β1 * x + λ * Σ(βi^2)</pre>
+            <p>Where:</p>
+            <ul>
+                <li>y is the dependent variable</li>
+                <li>x is the independent variable</li>
+                <li>β0 is the intercept</li>
+                <li>β1 is the coefficient of x</li>
+                <li>λ (lambda) is the regularization parameter</li>
+                <li>Σ(βi^2) is the sum of the squares of the coefficients</li>
+            </ul>
+            <p>The inclusion of the penalty term (λ) helps to shrink the coefficients and reduce their influence, which improves the model's performance on unseen data.</p>
+            <div class="text-center">
+                <img src="https://databasecamp.de/wp-content/uploads/Ridge-Regression-7-1024x893.png" alt="Ridge Regression" class="img-fluid">
+            </div>
+        </div>
+
+        <!-- Section for Comparing Linear and Ridge Regression -->
+        <div class="section-title">
+            <h2>Comparing Linear Regression and Ridge Regression</h2>
+        </div>
+        <div class="section-content">
+            <p>In simple linear regression, the model can easily overfit the data, especially when there are many features (high-dimensional data). Ridge Regression, on the other hand, applies a penalty to the model's complexity, helping to reduce overfitting.</p>
+        </div>
+    </div>
+</body>
+</html>
